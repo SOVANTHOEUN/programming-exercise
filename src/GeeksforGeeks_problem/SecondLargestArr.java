@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class SecondLargestArr {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader (new InputStreamReader(System.in));
-        System.out.println(Integer.parseInt("578 597 191 869 441 411 706"));
         System.out.println(br.readLine().trim().toString());
 
 //        int tc = Integer.parseInt(br.readLine().trim());
