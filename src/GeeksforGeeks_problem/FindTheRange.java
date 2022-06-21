@@ -2,26 +2,19 @@ package GeeksforGeeks_problem;
 
 import java.util.Arrays;
 
-public class FindTheMedian {
-    public static void main(String[] args){
+public class FindTheRange {
+    public static void main(String[] args) {
         double[] lattArr = {37.489541,37.504866,37.508976,37.510910,37.515396,37.527800,37.540875,37.542809,37.555708,37.555955,37.558496,37.559840,37.559910,37.560190,37.561070,37.562155,37.562369,37.562426,37.563995,37.564111,37.564250,37.564310,37.564850,37.565328,37.566081,37.566330,37.568240,37.572724,37.574475,37.589261};
         double[] longArr = {126.917500,126.934648,126.948120,126.951977,126.966992,126.969377,126.974026,126.977220,126.978050,126.978598,126.979500,126.979555,126.980835,126.980844,126.983623,126.984792,126.985610,126.985690,126.988080,126.990879,126.995810,127.002890,127.004330,127.029712,127.041735,127.057428,127.057760,127.059892,127.110853,127.111155};
 
-        System.out.println("latt & long median : "+ new FindTheMedian().getMedian(lattArr, lattArr.length)+", "+ new FindTheMedian().getMedian(longArr, longArr.length));
+        System.out.println("latt & long Range : "+new FindTheRange().getRange(lattArr, lattArr.length) +", "+ new FindTheRange().getRange(longArr, longArr.length));
     }
 
-    public double getMedian(double[] arr, int n){
-        double median = 0;
+    public double getRange(double[] arr, int n){
+        double range = 0;
         Arrays.sort(arr);
+        range = arr[n-1] - arr[0];
 
-        if(n%2 == 0){
-            double k = arr[(n / 2) - 1];
-            double l = arr[(n / 2)];
-            median = (k + l) / 2;
-        }else{
-            median = arr[(n + 1) / 2 - 1];
-        }
-
-        return median;
-    }
+        return range;
+    };
 }
